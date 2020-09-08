@@ -51,11 +51,8 @@ a {
 header {
 	display: flex;
 	height:  50px;
-	/* flex-wrap: wrap; */
 	justify-content: space-around;
 	padding: 35px;
-
-	/* padding-left: 40px; */
 }
 .nav-area {
 	display: flex;
@@ -73,7 +70,6 @@ label {
 	align-items: center;
     font-family: 'Sedgwick Ave Display', cursive;
     font-size: 10px;
-    /* display: block; */
     cursor: pointer;
 }
 input#menu {
@@ -82,8 +78,6 @@ input#menu {
 .menu-content {
     max-height: 0;
     overflow: hidden;
-   /*  position: absolute; */
-	
     font-family: 'Oswald', sans-serif; 
     ul {
     	vertical-align: center;
@@ -163,6 +157,7 @@ input:checked ~ .menu-content {
 }
 
     /* Fixes dropdown menus placed on the right side */
+
 @media screen and (min-width: $mobile) {
 	.nav-area-2 {
 	 	display: flex;
@@ -213,9 +208,7 @@ input:checked ~ .menu-content {
 	text-align: center;
 	color: #FFFFFF;
 	opacity: 1;
-	position: absolute;
-	z-index: 0;
-	.btn-area {
+ 	.btn-area {
 		/* background: transparent url('../assets/Rectangle 12.svg') 0% 0% no-repeat padding-box; */
 		border-radius: 20px;
 		width: 100px;
@@ -226,13 +219,7 @@ input:checked ~ .menu-content {
 		letter-spacing: 0px;
 	}
 }
-/* @media screen and (max-width: 700px) and (min-width: $mobile) {
-	.middle-img-class {
-		margin-top: 10%;
-		position: relative;
-	}
-} */
-/* 700px */
+
 @media screen and (min-width: $tablet) {
 	.middle-img-class {
 		top: 50%;
@@ -257,14 +244,15 @@ input:checked ~ .menu-content {
 		}
 	}	
 }
-/* 700px */
+
 @media screen and (max-width: $tablet) {
 	input:checked ~ .middle-img-class {
-    	/* margin-top: 40%; */
 	}
-	.middle-img-class {
-		margin-top: 15%;
-		position: relative; 
+	.middle-img-class {		top: 65%;
+		left: 50%;
+		position: absolute;  
+		transform: translate(-50%, -50%);
+
 		h1 {
 			font: normal normal 900 22px/30px archivo;
 		}
@@ -280,56 +268,6 @@ input:checked ~ .menu-content {
 		}
 	}
 }
-
-/* .rectangle-flex-div {
-	justify-content: space-around;
-}
-.rectangle-class {
-	margin-top: -110px;
-	margin-left: 80px;
-	margin-right: 30px;
-	.col-sm {
-		margin: 1rem;
-	}
-}
-.rectangle-flex-data {
-	padding: 10px;
-	background-color: rgba(255, 255, 255, 1); 
-	color: #3b3735;
-	text-align: center;
-	align-content: center;
-	h3 {
-	  	color: var(--unnamed-color-3b3735);
-	  	font: normal normal 900 13px/24px Archivo;
-		text-align: center;
-		letter-spacing: 0px;
-		color: #3B3735;
-		opacity: 1;
-	}	
-	p {
-		padding-bottom: auto;
-		color: var(--unnamed-color-3b3735);
-		font: normal normal normal 12px/20px Roboto;
-		text-align: center;
-		letter-spacing: 0px;
-		color: #3B3735;
-		opacity: 1;
-	}
-	img {
-		align-items: center;
-		margin-top: 30px;
-		width: 50px;
-		height: 50px;
-	}
-}
-@media screen and (max-width: $tablet) {
-	.rectangle-class {
-		margin-left: 40px;
-		margin-right: 40px;
-		margin-top: -90px;
-	}
-} 
- */
 
 
 .rectangle-flex-div {
@@ -351,7 +289,7 @@ input:checked ~ .menu-content {
 }
 .rectangle-flex-data {
 	padding: 13px;
-/* 	height: 250px; */
+	border-radius:  15px;
 	min-height: 210px;
 	overflow: hidden;
 	background-color: rgba(255, 255, 255, 1); 
@@ -387,13 +325,11 @@ input:checked ~ .menu-content {
 		margin-right: 40px;
 	}
 	.rectangle-flex-data {
-		/* height: 300px; */
 		min-height: 250px;
 	}
 }
 @media screen and (max-width: $tablet) {
 	.rectangle-flex-data {
-		/* height: 180px; */
 		min-height: 100px;
 		overflow: hidden;
 	}
@@ -404,31 +340,6 @@ input:checked ~ .menu-content {
 		overflow: hidden;
 	}
 }
-/* @media screen and (min-width: $mobile) and (max-width: $laptop) {
-	.rectangle-flex-div {
-		display: flex;
-		margin-top: -70px;
-		flex-wrap: wrap;
-		margin-left: 80px;
-		margin-right: 30px;
-	}
-	.rectangle-flex-box {
-		height: auto;
-		flex: 1 0 200px;
-		margin: 1rem;
-		margin-bottom: 1rem;
-		padding: 1rem;
-		border-radius: 5px;
-	}
-	.rectangle-flex-data {
-	  	h6 {
-			font: normal normal 900 18px/28px Archivo;
-		}
-		p {
-			font: normal normal normal 16px/26px Roboto;
-		}
-	}
-} */
 
 @media screen and (max-width: $mobile){
 	.rectangle-flex-div {
@@ -533,6 +444,7 @@ input:checked ~ .menu-content {
 	}
 }
 .card-data {
+	border-radius:  15px;
 	background-color: rgba(255, 255, 255, 1); 
 	color: #3b3735;
 	padding: 15px;
@@ -604,6 +516,7 @@ input:checked ~ .menu-content {
 		/* background: transparent url('../assets/Rectangle 12-card.png') 0% 0% no-repeat padding-box; */
 		width: 120px;
 		height: 30px;
+		margin-top: 6px;
 		font: normal normal normal 12px/22px Roboto;
 		border-radius: 15px;
 		background: var(--unnamed-color-8d8d8d) 0% 0% no-repeat padding-box;
@@ -612,7 +525,6 @@ input:checked ~ .menu-content {
 		text-align: center;
 		.read {
 			letter-spacing: 0px;
-			/* color: var(--unnamed-color-8d8d8d); */
 		 	color: #8D8D8D;
 			opacity: 1; 
 		}
@@ -662,7 +574,6 @@ input:checked ~ .menu-content {
 	padding: 1rem;
 }
 .mask-content {
-	/* height: 80%; */
 	.col-sm {
 		margin: 20px;
 	}
@@ -699,7 +610,6 @@ input:checked ~ .menu-content {
 			border-color: #FFFFFF;
 			position:relative;
 			margin-top: 10px;
-			/* background:#FFF; */
 			direction: ltr;
 			width: 200px;
 		} 
@@ -739,17 +649,10 @@ input:checked ~ .menu-content {
 		margin-left: 40px;
 		margin-right: 40px;
 	}
-	.mask-content {
-		.image {
-		/* 	width: 40%;
-			height: 70%; */
-		}
-	}
 }
 @media screen and (max-width: $tablet) {
 	.mask-content {
 		.image {
-			/* display: none; */
 			width: 60%;
   			height: 60%;
 		}
@@ -780,8 +683,6 @@ input:checked ~ .menu-content {
 	height: 40vh;
 	background: transparent url('../assets/Rectangle 57.png') 0% 0% no-repeat padding-box;
 	opacity: 1;
-	
-	/* justify-content: space-around; */
 	.row {
 		padding: 10px;
 		padding-left: 30px;
@@ -816,7 +717,7 @@ input:checked ~ .menu-content {
 .another-link {
 	padding: 20px;
 }
-/* 750 */
+
 @media screen and (max-width: $tablet) {
 		.info {
 			padding: 35px;
@@ -827,7 +728,7 @@ input:checked ~ .menu-content {
 		
 }
 
-/*  800px */
+
 @media screen and (max-width: $tablet) {
 	.fifth-body-part {
 		 height: 120vh; 
@@ -835,21 +736,18 @@ input:checked ~ .menu-content {
 	.footer-flex-data {
 		display: block;
 		text-align: center;
-		/* align-items: left; */
 		p {
 			text-align: center;
 		}
 		h6 {
 			text-align: center;
-			/* vertical-align: center;
-			align-items: center; */
 		}
 		a {
 			text-align: center;
 		}
 	}
 	.footer-flex-box {
-		/* margin-left: 140px; */
+
 	} 
 } 
 
